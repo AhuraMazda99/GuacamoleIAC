@@ -8,7 +8,9 @@ terraform {
 }
 
 provider "linode" {
-  token = "72c992d857dc90563d0b6278d8c1eaeaa9e3c41ddb0ba0dec9e7e710ca733e38"
+  token = data.linode_account.Current.token
+}
+data "linode_account" "Current" {
 }
 
 resource "linode_instance" "terraform-web" {

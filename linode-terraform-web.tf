@@ -20,5 +20,5 @@ resource "linode_instance" "terraform-web" {
         region = "us-east"
         type = "g6-standard-1"
         authorized_keys = [ "YOUR_PUBLIC_SSH_KEY" ]
-        root_pass = "Jizanisthebest123!"
+        root_pass = "test"
 }

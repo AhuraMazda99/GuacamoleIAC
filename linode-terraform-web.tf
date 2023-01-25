@@ -24,7 +24,7 @@ provider "linode" {
 variable "token" {
   type = string
   description = "token"
-  default = "2222881c62cbda6a15257d7c1df8142f7f0f9aa0689bf8c25df3a0f56278a782"
+  default = ""
 }
 variable "root_pass" {
   type = string

@@ -14,7 +14,7 @@ resource "linode_instance" "terraform-web" {
         label = "Terraform-Web-Example"
         group = "Terraform"
         region = "us-east"
-        type = "g6-standard-1"
+        type = "g6-nanode-1"
         authorized_keys = var.sshkey
         root_pass = var.root_pass
 }

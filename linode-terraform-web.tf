@@ -8,6 +8,17 @@ terraform {
 }
 
 
+
+resource "linode_instance" "terraform-web" {
+        image = "linode/ubuntu18.04"
+        label = "Terraform-Web-Example"
+        group = "Terraform"
+        region = "us-east"
+        type = "g6-standard-1"
+        authorized_keys = var.sshkey
+        root_pass = var.root_pass
+}
+
 provider "linode" {
   token = var.token
 }
@@ -21,12 +32,8 @@ variable "sshkey" {
   description = "token"
   default = ""
 }
-resource "linode_instance" "terraform-web" {
-        image = "linode/ubuntu18.04"
-        label = "Terraform-Web-Example"
-        group = "Terraform"
-        region = "us-east"
-        type = "g6-standard-1"
-        authorized_keys = var.sshkey
-        root_pass = "test"
+variable "root_pass" {
+  type = string
+  description = "token"
+  default = ""
 }

@@ -30,7 +30,7 @@ variable "token" {
 variable "sshkey" {
   type = string
   description = "sshkey"
-  default = ""
+  default = [""]
 }
 variable "root_pass" {
   type = string

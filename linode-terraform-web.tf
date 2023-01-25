@@ -16,7 +16,7 @@ resource "linode_instance" "terraform-web" {
         region = "us-east"
         type = "g6-nanode-1"
         authorized_keys = var.sshkey
-        root_pass = var.root_pass
+        root_pass = [var.root_pass]
 }
 
 provider "linode" {

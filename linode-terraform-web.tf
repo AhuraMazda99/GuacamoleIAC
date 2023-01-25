@@ -15,7 +15,7 @@ resource "linode_instance" "terraform-web" {
         group = "Terraform"
         region = "us-east"
         type = "g6-nanode-1"
-        root_pass = [var.root_pass]
+        root_pass = var.root_pass
 }
 
 provider "linode" {

@@ -15,7 +15,6 @@ resource "linode_instance" "terraform-web" {
         group = "Terraform"
         region = "us-east"
         type = "g6-nanode-1"
-        authorized_keys = var.sshkey
         root_pass = [var.root_pass]
 }
 
@@ -26,11 +25,6 @@ variable "token" {
   type = string
   description = "token"
   default = ""
-}
-variable "sshkey" {
-  type = string
-  description = "sshkey"
-  default = [""]
 }
 variable "root_pass" {
   type = string

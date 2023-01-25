@@ -29,11 +29,11 @@ variable "token" {
 }
 variable "sshkey" {
   type = string
-  description = "token"
+  description = "sshkey"
   default = ""
 }
 variable "root_pass" {
   type = string
-  description = "token"
+  description = "root password"
   default = ""
 }
